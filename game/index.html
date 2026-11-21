@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verdant — A Glasshouse Heist</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #060d0a;
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Georgia", "Times New Roman", serif;
+  }
+  #stage {
+    position: relative;
+    width: 1024px;
+    height: 640px;
+  }
+  canvas {
+    display: block;
+    width: 1024px;
+    height: 640px;
+    background: #0a1a12;
+    border: 1px solid #2c4a34;
+    box-shadow: 0 0 60px rgba(20, 90, 60, 0.35);
+  }
+  #hint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -26px;
+    text-align: center;
+    color: #6f8f7a;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="game" width="1024" height="640"></canvas>
+  <div id="hint">WASD / ARROWS MOVE &nbsp;·&nbsp; SHIFT SNEAK &nbsp;·&nbsp; Q OR CLICK TOSS A PEBBLE &nbsp;·&nbsp; R RESTART LEVEL</div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
