@@ -258,5 +258,12 @@ export function createGame(canvas) {
     }
   }
 
+  // Preload night 1 so the title screen renders over the glasshouse:
+  // draw() runs every frame, even before the player presses ENTER,
+  // and render() needs a level. startRun() reloads the level fresh
+  // when the run actually begins.
+  loadLevel(0);
+  state.screen = 'title';
+
   return { state, update, draw, loadLevel, startRun };
 }
